@@ -1,0 +1,19 @@
+# .dockerignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.bak
+*.tmp
+*.log
+*.DS_Store
+*.egg-info/
+.eggs/
+*.git
+*.gitignore
+*.md
+examples/
+mineru/Lib/site-packages/__pycache__/
+mineru/Lib/__pycache__/
+mineru/Scripts/__pycache__/

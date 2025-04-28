@@ -1,0 +1,9 @@
+{
+    "device-mode": "cpu",
+    "llm-aided-config": {
+        "title_aided": {
+            "enable": false,
+            "api_key": ""
+        }
+    }
+}
