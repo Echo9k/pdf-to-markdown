@@ -2,6 +2,9 @@
 # setup.sh - Quick setup for MinerU Lambda Extraction
 set -e
 
+# Check if running as root
+sudo apt-get update && sudo apt-get install -y libgl1
+
 cd "$(dirname "$0")/app"
 
 echo "[1/3] Installing Python dependencies..."

@@ -11,6 +11,7 @@ help:
 	@echo "  clean         Remove __pycache__ and temp files"
 
 setup:
+	sudo apt-get update && sudo apt-get install -y libgl1
 	pip install -r app/requirements.txt
 	python app/setup_magic_pdf.py
 

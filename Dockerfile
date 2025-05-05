@@ -4,6 +4,9 @@ FROM public.ecr.aws/lambda/python:3.12
 # Install system dependencies (if needed)
 RUN yum install -y gcc git && rm -rf /var/cache/yum
 
+# Install additional dependencies
+RUN yum update -y && yum install -y libglvnd-glx
+
 # Copy requirements and install Python dependencies
 COPY requirements.txt ./
 RUN pip install --upgrade pip && pip install -r requirements.txt
