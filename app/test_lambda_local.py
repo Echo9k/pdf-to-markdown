@@ -21,7 +21,7 @@ os.environ['MAGIC_PDF_CONFIG_PATH'] = 'magic-pdf.json'  # Correct config path fo
 
 # --- Simulate S3 Event ---
 # For local testing, use a real file from examples and set LOCAL_TEST_INPUT_PATH
-os.environ['LOCAL_TEST_INPUT_PATH'] = 'examples/scanned.pdf'  # Use a real local file for autonomous test
+os.environ['LOCAL_TEST_INPUT_PATH'] = 'examples/academic_paper_formula.pdf'  # Use a real local file for autonomous test
 input_bucket_name = 'dummy-bucket'  # Not used in local mode
 input_object_key = 'dummy-key'      # Not used in local mode
 

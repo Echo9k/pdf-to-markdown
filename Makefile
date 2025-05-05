@@ -1,6 +1,6 @@
 # Makefile for MinerU Lambda Extraction
 
-.PHONY: help setup test docker-build docker-run clean
+.PHONY: help setup test docker-build docker-run clean package
 
 help:
 	@echo "Available targets:"
@@ -9,6 +9,7 @@ help:
 	@echo "  docker-build  Build Docker image for Lambda"
 	@echo "  docker-run    Run Docker image locally"
 	@echo "  clean         Remove __pycache__ and temp files"
+	@echo "  package       Package the Lambda function"
 
 setup:
 	sudo apt-get update && sudo apt-get install -y libgl1
@@ -26,3 +27,8 @@ docker-run:
 
 clean:
 	rm -rf __pycache__ app/__pycache__ app/*.pyc app/*.pyo app/*.log
+
+package:
+	pip install --target output/package -r app/requirements.txt
+	cp -r app/*.py app/*.json app/header.html output/package/
+	cd output/package && zip -r ../lambda.zip .
