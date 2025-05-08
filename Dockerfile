@@ -19,3 +19,4 @@ ENV MAGIC_PDF_CONFIG_PATH=magic-pdf.json
 
 # Set the Lambda handler
 CMD ["lambda_function.lambda_handler"]
+ 
